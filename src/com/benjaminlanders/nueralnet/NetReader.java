@@ -3,14 +3,21 @@ package com.benjaminlanders.nueralnet;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 
-
+/**
+ * A class designed to hold static methods for loading nets from files without bloating other code
+ * @author Benjamin Landers
+ *
+ */
 public class NetReader
 {
+	/**
+	 * Loads a neural net from rom
+	 * @param name the name the leads to the file
+	 * @return the net that is loaded (not done yet)
+	 */
 	public static Net netreader(String name)
 	{
 		File nettxt = new File(name);
@@ -42,11 +49,11 @@ public class NetReader
 					i++;
 				}
 			}
+			reader.close();	
 		} catch (IOException e)
 		{
 			e.printStackTrace();
 		}
-		
 		return null;
 		
 	}

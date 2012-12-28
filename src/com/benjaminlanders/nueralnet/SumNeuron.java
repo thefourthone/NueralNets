@@ -38,7 +38,7 @@ public class SumNeuron extends Neuron
 	 * The implimitation that makes it a sum neuron. It sums then normalizes the input
 	 */
 	@Override
-	protected double privateupdate()
+	protected double privateUpdate()
 	{
 		double temp = 0;
 		for(int i=0;i<inputs.length;i++)

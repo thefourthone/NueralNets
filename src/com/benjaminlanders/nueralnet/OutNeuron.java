@@ -37,7 +37,7 @@ public class OutNeuron extends Neuron
 	 * calls hand.setOut(int) with the sum of its inputs (not normalized)
 	 */
 	@Override
-	protected double privateupdate() 
+	protected double privateUpdate() 
 	{
 		double temp = 0;
 		for(int i=0;i<inputs.length;i++)

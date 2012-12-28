@@ -105,7 +105,7 @@ public abstract class Neuron
 	 * @param maxin the max input number
 	 * @return the new Neuron
 	 */
-	public static Neuron getNueron(int type, int maxin)
+	public static Neuron getNeuron(int type, int maxin)
 	{
 		switch(type)
 		{

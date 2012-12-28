@@ -21,7 +21,7 @@ public class Net implements Runnable
 	 * gets the neurons
 	 * @return the neurons
 	 */
-	public Neuron[] getNuerons()
+	public Neuron[] getNeurons()
 	{
 		return neurons;
 	}

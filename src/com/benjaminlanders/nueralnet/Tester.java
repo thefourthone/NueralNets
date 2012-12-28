@@ -49,19 +49,8 @@ public class Tester implements KeyListener
 	 */
 	public void setUpNuerons()
 	{
-		testnet = new Net(5); //new net
-		Neuron[] builder  = new Neuron[5]; //make new array for neurons
-		builder[0]=new InNeuron(); //make neurons
-		builder[1]=new InNeuron();
-		builder[2]=new SumNeuron(2);
-		builder[3]=new SumNeuron(2);
-		builder[4]=new OutNeuron(2);
-		builder[2].setInput(0,builder[0]); //start filling inputs
-		builder[2].setInput(1,builder[1]);
-		builder[3].setInput(0,builder[0]);
-		builder[3].setInput(1,builder[1]);
-		builder[4].setInput(0,builder[2]);
-		builder[4].setInput(1,builder[3]);
+		testnet = NetReader.netreader("neuralbuild.txt"); //new net
+		Neuron[] builder = testnet.getNeurons();
 		builder[2].setWeight(0, .5); //set weights
 		builder[2].setWeight(1, .5);
 		builder[3].setWeight(0, .5);

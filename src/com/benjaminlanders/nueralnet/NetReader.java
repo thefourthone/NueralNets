@@ -19,20 +19,20 @@ public class NetReader
 			String line = null;
 			int i =0;
 			Net output = null;
-			Nueron temp;
+			Neuron temp;
 			String[] holder, holder2;
-			Nueron[] holder3 = null;
+			Neuron[] holder3 = null;
 			while((line =reader.readLine()) != null)
 			{
 				if(output==null)
 				{
 					output = new Net(Integer.parseInt(line));
-					holder3 = new Nueron[Integer.parseInt(line)];
+					holder3 = new Neuron[Integer.parseInt(line)];
 				}else
 				{
 					holder = line.split("-");
 					holder2 = holder[0].split(",");
-					temp = Nueron.getNueron(Integer.parseInt(holder2[0]),Integer.parseInt(holder2[1]));
+					temp = Neuron.getNueron(Integer.parseInt(holder2[0]),Integer.parseInt(holder2[1]));
 					int x = 0;
 					for(String temp2: holder[1].split(","))
 					{

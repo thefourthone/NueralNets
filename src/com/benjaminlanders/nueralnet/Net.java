@@ -3,24 +3,24 @@ package com.benjaminlanders.nueralnet;
 
 public class Net implements Runnable
 {
-	private Nueron[] nuerons;
+	private Neuron[] neurons;
 	int framerate = 0;
 	
 	public Net(int maxsize)
 	{
-		setNuerons(new Nueron[maxsize]);
+		setNeurons(new Neuron[maxsize]);
 	}
-	public Nueron[] getNuerons()
+	public Neuron[] getNuerons()
 	{
-		return nuerons;
+		return neurons;
 	}
-	public void setNuerons(Nueron[] nuerons) 
+	public void setNeurons(Neuron[] nuerons) 
 	{
-		this.nuerons = nuerons;
+		this.neurons = nuerons;
 	}
 	public void update()
 	{
-		for(Nueron i: nuerons)
+		for(Neuron i: neurons)
 		{
 			i.update();
 		}

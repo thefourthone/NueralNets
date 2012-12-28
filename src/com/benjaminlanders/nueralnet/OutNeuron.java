@@ -1,35 +1,35 @@
 package com.benjaminlanders.nueralnet;
 
 /**
- * A nueron that allows the net to output. It outputs the sum of its nuerons
+ * A neuron that allows the net to output. It outputs the sum of its neurons
  * @author Benjamin Landers 
  *
  */
-public class OutNueron extends Nueron 
+public class OutNeuron extends Neuron 
 {
 	private Helper hand;
 	/**
 	 * calls super(int)
-	 * @param maxin the max number of input nuerons
+	 * @param maxin the max number of input neurons
 	 */
-	public OutNueron(int maxin)
+	public OutNeuron(int maxin)
 	{
 		super(maxin);
 	}
 	/**
-	 * calls super(Nueron[])
-	 * @param input the input array of nuerons
+	 * calls super(Neuron[])
+	 * @param input the input array of neurons
 	 */
-	public OutNueron(Nueron[] input)
+	public OutNeuron(Neuron[] input)
 	{
 		super(input);
 	}
 	/**
-	 * calls super(Nueron[],double[])
-	 * @param input the input array of nuerons
-	 * @param weights the respective array of weigths
+	 * calls super(Neuron[],double[])
+	 * @param input the input array of neurons
+	 * @param weights the respective array of weights
 	 */
-	public OutNueron(Nueron[] input, double[] weights)
+	public OutNeuron(Neuron[] input, double[] weights)
 	{
 		super(input,weights);
 	}

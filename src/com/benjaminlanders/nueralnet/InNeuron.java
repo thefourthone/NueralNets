@@ -1,10 +1,10 @@
 package com.benjaminlanders.nueralnet;
 
 
-public class InNueron extends Nueron
+public class InNeuron extends Neuron
 {
 	Helper hand;
-	public InNueron()
+	public InNeuron()
 	{
 		super(0);
 	}

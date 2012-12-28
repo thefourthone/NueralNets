@@ -45,17 +45,17 @@ public class Tester implements KeyListener
 		
 	}
 	/**
-	 * fills nuerons in for the test using a hard coded method
+	 * fills neurons in for the test using a hard coded method
 	 */
 	public void setUpNuerons()
 	{
 		testnet = new Net(5); //new net
-		Nueron[] builder  = new Nueron[5]; //make new array for nuerons
-		builder[0]=new InNueron(); //make nuerons
-		builder[1]=new InNueron();
-		builder[2]=new SumNueron(2);
-		builder[3]=new SumNueron(2);
-		builder[4]=new OutNueron(2);
+		Neuron[] builder  = new Neuron[5]; //make new array for neurons
+		builder[0]=new InNeuron(); //make neurons
+		builder[1]=new InNeuron();
+		builder[2]=new SumNeuron(2);
+		builder[3]=new SumNeuron(2);
+		builder[4]=new OutNeuron(2);
 		builder[2].setInput(0,builder[0]); //start filling inputs
 		builder[2].setInput(1,builder[1]);
 		builder[3].setInput(0,builder[0]);
@@ -68,7 +68,7 @@ public class Tester implements KeyListener
 		builder[3].setWeight(1, .5);
 		builder[4].setWeight(0, .5);
 		builder[4].setWeight(1, .5);
-		((InNueron) builder[0]).setHelper(new Helper()
+		((InNeuron) builder[0]).setHelper(new Helper()
 		{
 			public double getIn()
 			{
@@ -80,7 +80,7 @@ public class Tester implements KeyListener
 			}
 			
 		});
-		((InNueron) builder[1]).setHelper(new Helper()
+		((InNeuron) builder[1]).setHelper(new Helper()
 		{
 			public double getIn()
 			{
@@ -92,7 +92,7 @@ public class Tester implements KeyListener
 			}
 			
 		});
-		((OutNueron) builder[4]).setHelper(new Helper()
+		((OutNeuron) builder[4]).setHelper(new Helper()
 		{
 			public double getIn()
 			{
@@ -105,7 +105,7 @@ public class Tester implements KeyListener
 			}
 			
 		});
-		testnet.setNuerons(builder);
+		testnet.setNeurons(builder);
 		testnet.start(200);
 	}
 	@Override

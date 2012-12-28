@@ -1,27 +1,27 @@
 package com.benjaminlanders.nueralnet;
 
 /**
- * the abstract class that is the base for all types of nuerons
+ * the abstract class that is the base for all types of neurons
  * @author Benjamin Landers
  */
-public abstract class Nueron
+public abstract class Neuron
 {
 	private double value=0;
 	protected double[] weights;
-	protected Nueron[] inputs;
+	protected Neuron[] inputs;
 	public static final int SUM = 0, IN = 1, OUT = 2;
 	
-	public Nueron(int maxin)
+	public Neuron(int maxin)
 	{
-		inputs = new Nueron[maxin];
+		inputs = new Neuron[maxin];
 		weights = new double[maxin];
 	}
-	public Nueron(Nueron[] input)
+	public Neuron(Neuron[] input)
 	{
 		inputs = input;
 		weights = new double[input.length];
 	}
-	public Nueron(Nueron[] input, double[] weights)
+	public Neuron(Neuron[] input, double[] weights)
 	{
 		inputs = input;
 		this.weights = weights;
@@ -36,16 +36,16 @@ public abstract class Nueron
 		return value;
 	}
 
-	public Nueron[] getInputs()
+	public Neuron[] getInputs()
 	{
 		return inputs;
 	}
 
-	public void setInputs(Nueron[] inputs)
+	public void setInputs(Neuron[] inputs)
 	{
 		this.inputs = inputs;
 	}
-	public void setInput(int index, Nueron value)
+	public void setInput(int index, Neuron value)
 	{
 		this.inputs[index] = value;
 	}
@@ -57,16 +57,16 @@ public abstract class Nueron
 	{
 		this.weights[index] = value;
 	}
-	public static Nueron getNueron(int type, int maxin)
+	public static Neuron getNueron(int type, int maxin)
 	{
 		switch(type)
 		{
 		case SUM:
-			return new SumNueron(maxin);
+			return new SumNeuron(maxin);
 		case IN:
-			return new InNueron();
+			return new InNeuron();
 		case OUT:
-			return new OutNueron(maxin);
+			return new OutNeuron(maxin);
 		default:
 			return null;
 		}

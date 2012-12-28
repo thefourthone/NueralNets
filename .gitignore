@@ -4,3 +4,10 @@
 *.jar
 *.war
 *.ear
+
+# project files #
+.classpath
+.project
+
+# javadoc #
+/doc

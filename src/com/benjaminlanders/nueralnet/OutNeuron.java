@@ -34,6 +34,38 @@ public class OutNeuron extends Neuron
 		super(input,weights);
 	}
 	/**
+	 * calls super(int)
+	 * @param maxin the max number of input neurons
+	 * @param hand the helper object
+	 */
+	public OutNeuron(int maxin, Helper hand)
+	{
+		super(maxin);
+		setHelper(hand);
+	}
+	/**
+	 * calls super(Neuron[])
+	 * @param input the input array of neurons
+	 * @param hand the helper object
+	 */
+	public OutNeuron(Neuron[] input, Helper hand)
+	{
+		super(input);
+		setHelper(hand);
+	}
+	/**
+	 * calls super(Neuron[],double[])
+	 * @param input the input array of neurons
+	 * @param weights the respective array of weights
+	 * @param hand the helper object
+	 */
+	public OutNeuron(Neuron[] input, double[] weights, Helper hand)
+	{
+		super(input,weights);
+		setHelper(hand);
+		
+	}
+	/**
 	 * calls hand.setOut(int) with the sum of its inputs (not normalized)
 	 */
 	@Override

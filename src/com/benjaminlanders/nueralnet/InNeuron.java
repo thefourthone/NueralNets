@@ -13,7 +13,16 @@ public class InNeuron extends Neuron
 	 */
 	public InNeuron()
 	{
+		super(0);		
+	}
+	/**
+	 * calls super(0) 
+	 * @param hand the helper object for the class
+	 */
+	public InNeuron(Helper hand)
+	{
 		super(0);
+		this.hand = hand;
 	}
 	/**
 	 * sets helper

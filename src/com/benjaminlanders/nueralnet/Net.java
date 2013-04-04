@@ -18,6 +18,14 @@ public class Net implements Runnable
 		setNeurons(new Neuron[maxsize]);
 	}
 	/**
+	 * makes a new net with a set of neurons
+	 * @param maxsize the max number of neurons in the net
+	 */
+	public Net(Neuron[] neurons)
+	{
+		setNeurons(neurons);
+	}
+	/**
 	 * gets the neurons
 	 * @return the neurons
 	 */

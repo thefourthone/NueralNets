@@ -19,7 +19,7 @@ public class Net implements Runnable
 	}
 	/**
 	 * makes a new net with a set of neurons
-	 * @param maxsize the max number of neurons in the net
+	 * @param neurons the neurons that will be set
 	 */
 	public Net(Neuron[] neurons)
 	{
